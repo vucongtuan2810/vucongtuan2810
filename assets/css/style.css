@@ -66,6 +66,7 @@ html{
 
 /*Main*/
 #main{
+    
    
 }
 #header{
@@ -194,9 +195,13 @@ html{
 }
 #content .content-section{
     width: 800px;
+    max-width: 100%;
     padding: 64px 0;
     margin-right: auto;
     margin-left: auto;
+    padding: 0 16px;
+    /* padding-left: 16px;
+    padding-right: 16px; */
 }
 #content .content-section .content-heading{
     font-size: 30px;
@@ -204,6 +209,7 @@ html{
     text-align: center;
     letter-spacing: 4px;
     text-transform: uppercase;
+    padding-top: 16px;
 }
 
 #content .content-section .content-sub-heading{
