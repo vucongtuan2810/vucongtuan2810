@@ -20,7 +20,7 @@
                 <li><a href="#band">Story</a></li>
                 <li><a href="#tour">Travel</a></li>
                 <li><a href="#contact">Contact</a></li>
-                <li><a href="">
+                <li><a href="#">
                     More
                     <i class="nav-arrow-down ti-angle-down"></i>
                 </a>
@@ -32,6 +32,10 @@
                 </li>
             </ul>
             <!--End-nav-->
+            <!--Mobile menu button-->
+            <div id="mobile-menu" class="mobile-menu-btn">
+                <i class=" menu-icon ti-menu"></i>
+            </div>
             <!--Begin: search button-->
             <div class="search-btn">
                 <i class="search-icon ti-search"></i>
@@ -188,17 +192,12 @@ All the hands still went up.</p>
                     </div>
                
             </div>
-            
-            
-        </div>
-        <!-- End: contact section-->
-
-        <div id="footer">
+            <!-- End: contact section-->
             <div class="map-section">
                 <img src="./assets/map/map.jpg" alt="Map">
             </div>
-            
-             <div class="socials-list">
+            <div class="foot">
+            <div class="socials-list">
                 <a href="https://www.facebook.com/vu.congtuan.56"><i class="ti-facebook"></i></a>
                 <a href="https://www.instagram.com/v.c.t2810/"><i class="ti-instagram"></i></a>
                 <a href=""><i class="ti-youtube"></i></a>
@@ -209,6 +208,14 @@ All the hands still went up.</p>
                 <p class="copyright">I love you so much <3 </p>
             </div>
             </div>
+            </div>
+        </div>
+        
+        
+        <div id="footer">
+            
+            
+             
              
             
         </div>
@@ -228,7 +235,7 @@ All the hands still went up.</p>
             <div class="modal-body">
                 <label for="quantity" class="modal-label">
                     <i class="ti-shopping-cart"></i>
-                    Tickets, $15 per person
+                    How many people you wanna go with ?
                 </label>
                 <input id="ticket-quantity" type="text" class="modal-input" placeholder="How many?">
 
@@ -238,7 +245,7 @@ All the hands still went up.</p>
                 </label>
                 <input id="ticket-email" type="email" class="modal-input" placeholder="Enter email...?">
                 <button id="buy-tickets">
-                    Pay
+                    Send
                     <i class="ti-check"></i>
                 </button>
                 <footer class="modal-footer">
@@ -272,6 +279,33 @@ All the hands still went up.</p>
         modalContainer.addEventListener('click', function (event) {
             event.stopPropagation()
         })
+    </script>
+    <script>
+        var header = document.getElementById('header');
+        var mobileMenu = document.getElementById('mobile-menu');
+        var headerHeight = header.clientHeight;
+
+        // Đóng mở Mobile menu
+        mobileMenu.onclick = function() {
+            var isClosed = header.clientHeight === headerHeight;
+            if(isClosed) {
+                header.style.height ='auto';
+            }
+            else{
+                header.style.height =null;
+            }
+        }
+
+        // Tự động đóng khi chọn menu
+        var menuItems = document.querySelectorAll ('#nav li a[href*="#"');
+        for (var i=0; i < menuItems.length; i++) {
+            var menuItem = menuItems[i];
+
+            menuItem.onclick = function() {
+                 header.style.height =null;
+            }
+
+        }
     </script>
 </body>
 </html>
