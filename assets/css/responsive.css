@@ -32,6 +32,17 @@
 
 /* Mobile */
 @media (max-width: 739px) {
+    .s-full-width{
+       width: 100% !important; 
+    }
+
+    .s-col-full{
+       width: 100% !important; 
+    }
+    .s-mt-8{
+        margin-top: 8px !important;
+    }
+
     #header .mobile-menu-btn{
         position: absolute;
         top: 0;
@@ -61,6 +72,15 @@
         position: initial;
         background-color: #333;
     }
-    
+    #content .member-item{
+        margin-top: 30px;
+        width: 100%;
+    }
+    #content .member-img{
+        width: 60%;
+    }
+    .contact-form{
+        margin-top: 16px;
+    }
     
 }
